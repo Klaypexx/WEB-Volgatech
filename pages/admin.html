@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Oxygen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <title>Admin panel</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__block">
+                <span class="header__title">Escape.<span class="header__subtitle">author</span></span>
+            </div>
+            <div class="header__user">
+                <input type="image" class="img-user" src="/static/img/steamav.jpg">
+                <img class="icon-exit" src="../static/img/admin/admin_icons/log-out.svg" alt="icon">
+            </div>
+        </div>
+    </header>
+
+
+    <section class="main-section">
+        <div class="wrapper-publish">
+            <div class="wrapper-publish__text">
+                <h1 class="wrapper-publish__title">New Post</h1>
+                <p class="wrapper-publish__subtitle">Fill out the form bellow and publish your article</p>
+            </div>
+            <a href="" class="wrapper-publish__btn" id="upload_btn">Publish</a>
+        </div>
+
+        <div class="wrapper-info">
+            <span class="wrapper-info__title">Main Information</span>
+            <div class="wrapper-info__container">
+                <div class="wrapper-info__left">
+                    <form action="" class="wrapper-info__form">
+                        <label class="wrapper-info__form-text">Title</label>
+                        <input class="wrapper-info__form-input title" id="title" type="text" name="title">
+                        <label class="wrapper-info__form-text">Short description</label>
+                        <input class="wrapper-info__form-input description" id="subtitle" type="text" name="description">
+                        <label class="wrapper-info__form-text">Author name</label>
+                        <input class="wrapper-info__form-input author" id="author_name" type="text" name="name_author">
+                        <label class="wrapper-info__form-text">Author Photo</label>
+
+                        <div class="author-photo">
+                            <input type="file" id="author_input" hidden="hidden" accept=".jpg, .jpeg, .png, .gif">
+                            <div class="author-photo__border">
+                                <img id="author" src="../static/img/admin/admin_icons/camera.svg">
+                            </div>
+                            <label for="author_input" class="author-photo__upload-btn upload-btn" id="author_btn">Upload</label>
+                            <div class="author-photo__line" id="author_line">
+                                <img class="author-photo__upload-icon line-icon" src="../static/img/admin/admin_icons/camera.svg">
+                                <label class="author-photo__upload-label upload-btn" for="author_input">Upload New</label>
+                                <img class="author-photo__remove-icon line-icon" src="../static/img/admin/admin_icons/Union.svg">
+                                <a href="" class="author-photo__remove-link" id="author_remove_btn">Remove</a>                                        
+                            </div>  
+                        </div>
+                        
+                        <label class="wrapper-info__form-text">Publish Date</label>
+                        <input class="wrapper-info__form-input date" id="date" type="date" name="date">
+
+                        <label class="wrapper-info__form-text">Hero Image</label>
+                        <div class="hero-image">
+                            <div class="hero-image__border">
+                                <input type="file" id="hero_post" hidden="hidden" accept=".jpg, .jpeg, .png, .gif">
+                                <img class="hero-image__icon" id="hero_icon"  src="../static/img/admin/admin_icons/camera.svg">
+                                <label class="hero-image__upload-btn upload-btn" id="hero_btn" for="hero_post">Upload</label>
+                            </div>
+
+                            <div class="hero-image__line" id="hero_line">
+                                <img class="hero-image__upload-icon line-icon" src="../static/img/admin/admin_icons/camera.svg">
+                                <label class="hero-image__upload-label upload-btn" for="hero_post">Upload New</label>
+                                <img class="hero-image__remove-icon line-icon" src="../static/img/admin/admin_icons/Union.svg">
+                                <a href="" class="hero-image__remove-link" id="hero_remove_btn">Remove</a>                                        
+                            </div> 
+                    
+                            <p class="hero-image__text" id="hero_text">Size up to 10mb. Format: png, jpeg, gif.</p>
+                        </div>
+
+                        <label class="wrapper-info__form-text">Hero Image</label>
+                        <div class="hero-image">
+                            <div class="hero-image__border hero-image-small">
+                                <input type="file" id="hero_small_post" hidden="hidden" accept=".jpg, .jpeg, .png, .gif">
+                                <img class="hero-image__icon" id="hero_small_icon"  src="../static/img/admin/admin_icons/camera.svg">
+                                <label class="hero-image__upload-btn upload-btn" id="hero_small_btn" for="hero_small_post">Upload</label>
+                            </div>
+
+                            <div class="hero-image__line" id="hero_small_line">
+                                <img class="hero-image__upload-icon line-icon" src="../static/img/admin/admin_icons/camera.svg">
+                                <label class="hero-image__upload-label upload-btn" for="hero_small_post">Upload New</label>
+                                <img class="hero-image__remove-icon line-icon" src="../static/img/admin/admin_icons/Union.svg">
+                                <a href="" class="hero-image__remove-link" id="hero_small_remove_btn">Remove</a>                                        
+                            </div> 
+                    
+                            <p class="hero-image__text" id="hero_small_text">Size up to 5mb. Format: png, jpeg, gif.</p>
+                        </div>
+                    
+                    </form>
+                </div>
+                <div class="wrapper-info__right">
+                    <div class="wrapper-info__form-text form-text-16px">Article preview</div>
+                    <div class="article-preview">
+                        <div class="aticle-preview-gradiend-vert"></div>
+                        <div class="article-preview-gradiend-horizon"></div>
+                        <div class="article-preview__border-top">
+                            <div class="article-preview__border">
+                                <div class="article-preview__fake-btn">
+                                    <div class="fake-btn"></div>
+                                    <div class="fake-btn"></div>
+                                    <div class="fake-btn"></div>
+                                </div>
+                                <div class="article-preview__container">
+                                    <div class="article-preview__header">
+                                        <h1 class="article-preview__title" id="article_title"></h1>
+                                        <p class="article-preview__subtitle" id="article_subtitle"></p>
+                                    </div>
+                                    <div class="article-preview__hero-image" id="article_image"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrapper-info__form-text form-text-16px">Post card preview</div>
+                    <div class="post-card-preview">
+                        <div class="post-card-preview-gradient-vert"></div>
+                        <div class="post-card-preview-gradient-horizon"></div>
+                        <div class="post-card-preview__border">
+                            <div class="post-card-preview__container">
+                                <div class="post-card-preview__hero-image" id="post_card_image"></div>
+                                <div class="post-card-preview__cell">
+                                    <h1 class="post-card-preview__title" id="post_card_title"></h1>
+                                    <p class="post-card-preview__subtitle" id="post_card_subtitle"></p>
+                                </div>
+                                <div class="post-card-preview__subblock-cell">
+                                    <div class="post-card-preview__item" id="post_card_item"></div>
+                                    <p class="post-card-preview__author" id="post_card_author"></p>
+                                    <p class="post-card-preview__data" id="post_card_data"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper-content">
+            <h1 class="wrapper-content__title">Content</h1>
+            <form action="" class="wrapper-content__form">
+                <label class="wrapper-info__form-text">Post content (plain text)</label>
+                <textarea id="textarea" class="wrapper-content__text" placeholder="Type anything you want ..."></textarea>
+            </form>
+        </div>
+    </section>
+
+    <script src="/js/script.js"></script>
+
+</body>
+</html>

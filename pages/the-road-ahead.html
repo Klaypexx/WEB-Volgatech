@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../static/css/normalize.css" rel="stylesheet" >
+    <link href="/static/css/style-the-road-ahead.css" rel="stylesheet" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Oxygen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <title>Road</title>
+</head>
+<body>
+    <section class="header">
+        <div class="nav-container">
+            <a href="/home" class="nav-container__text">Escape.</a>
+            <nav class="nav-menu">
+                <ul class="nav-menu__list">
+                    <li class="nav-menu__list-item"><a href="/">HOME</a></li>
+                    <li class="nav-menu__list-item"><a href="/">CATEGORIES</a></li>
+                    <li class="nav-menu__list-item"><a href="/">ABOUT</a></li>
+                    <li class="nav-menu__list-item"><a href="/">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="greeting-box">
+            <h1>{{ .Title }}</h1>
+            <p class="greeting-box__text">{{ .Post_Subtitle }}</p>
+        </div>   
+    </section>
+    <section class="main-section">
+        <img class="main-section__image" src="{{ .ImgModifier }}" alt="foto_road_ahead">
+        <div class="main-section__text-box">
+            <p class="main-section__text-item">{{ .Content }}</p>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-text">
+            <h2 class="footer-text__item">Stay in Touch</h2>
+        </div> 
+        <form action="#" class="form">
+            <input  class="form__input" type="text" name="post" placeholder="Enter your email address">
+            <input class="form__button" type="submit" name="button" value="Submit">   
+        </form>
+        <div class="footer__navigation">
+            <div class="nav-container">
+                <a href="/home" class="nav-container__text nav-footer__text">Escape.</a>
+                <nav class="nav-menu">
+                    <ul class="nav-menu__list">
+                        <li class="nav-menu__list-item nav-footer__list-item"><a href="/home/post">HOME</a></li>
+                        <li class="nav-menu__list-item nav-footer__list-item"><a href="/">CATEGORIES</a></li>
+                        <li class="nav-menu__list-item nav-footer__list-item"><a href="/">ABOUT</a></li>
+                        <li class="nav-menu__list-item nav-footer__list-item"><a href="/">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

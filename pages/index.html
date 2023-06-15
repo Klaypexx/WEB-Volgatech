@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../static/css/normalize.css" rel="stylesheet" >
+    <link href="../static/css/style-index.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Oxygen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <title>{{ .Title }}</title>
+</head>
+<body>
+    <section class="header">
+        <div class="nav-container">
+            <a href="#" class="nav-container__text">Escape.</a>
+            <nav class="nav-menu">
+                <ul class="nav-menu__list">
+                    <li class="nav-menu__list-item"><a href="/home/post" class="nav-menu__link">HOME</a></li>
+                    <li class="nav-menu__list-item"><a href="#categories" class="nav-menu__link">CATEGORIES</a></li>
+                    <li class="nav-menu__list-item"><a href="#about" class="nav-menu__link">ABOUT</a></li>
+                    <li class="nav-menu__list-item"><a href="#contact" class="nav-menu__link">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header__greeting greeting-box">
+            <h1 class="greeting-box__title">Let's do it together.</h1>
+            <p class="greeting-box__text">We travel the world in search of stories. Come along for the ride</p>
+            <a href="#" class="greeting-box__button">View Latest Posts</a>       
+        </div>   
+    </section>
+
+    <section class="main-section">
+        <div class="container-navigation">
+            <nav class="main-section__nav">
+                <ul class="main-section__nav-list">
+                    <li class="main-section__list-item"><a href="#Nature" class="main-section__link">Nature</a></li>
+                    <li class="main-section__list-item"><a href="#Photography" class="main-section__link">Photography</a></li>
+                    <li class="main-section__list-item"><a href="#Relaxation" class="main-section__link">Relaxation</a></li>
+                    <li class="main-section__list-item"><a href="#Vacation" class="main-section__link">Vacation</a></li>
+                    <li class="main-section__list-item"><a href="#Travel" class="main-section__link">Travel</a></li>
+                    <li class="main-section__list-item"><a href="#Adventure" class="main-section__link">Adventure</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="text-container">
+            <h2 class="text-container__item">Featured Posts</h2>  
+            <div class="text-container__border-bottom"></div>  
+        </div>
+
+        <div class="main-title-featured">
+            {{ range .FeaturedPosts }}    
+                <div class="main-featured">
+                    <div class="main-featured-subblock">
+                        <button class="featured__btn">ADVENTURE</button>
+                        <a class="main__featured__title" href="/post/{{ .PostID }}">{{ .Title }}</a>
+                        <img class="main-featured__back" src="{{ .ImgModifier }}" alt="foto from">
+                        <p class="main__featured__text">{{ .Subtitle }}</p>
+                        <div class="main-featured-subblock-cell">
+                            <img src="{{ .AuthorImg }}" alt="foto william">
+                            <p class="main__featured__author">{{ .Author }}</p>
+                            <p class="main__featured__data">{{ .PublishDate }}</p>
+                        </div>
+                    </div>
+                </div>
+            {{ end }}        
+        </div>     
+
+        <div class="text-container">
+            <h2 class="text-container__item">Most Recent</h2>  
+            <div class="text-container__border-bottom"></div>  
+        </div>
+
+        <div class="main-most">
+            {{ range .MostRecent }}
+            <div class="main-most-cell">
+                <a class="main-most-cell__title" href="/post/{{ .PostID }}">{{ .Title }}</a>
+                <p class="main-most-cell__text">{{ .Subtitle }}</p>
+                <img class="main-most__back" src="{{ .ImgModifier }}" alt="foto still">
+                <div class="main-most-subblock-cell">
+                    <img class="main-most__item" src="{{ .AuthorImg }}" alt="foto william">
+                    <p class="main-most__author">{{ .Author }}</p>
+                    <p class="main-most__data">{{ .PublishDate }}</p>
+                </div>
+            </div>
+            {{ end }}
+         </div>   
+
+    </section>
+
+    <footer class="footer-container">
+        <div class="text-container footer-container__text">
+            <h2 class="text-container__item footer-container__item">Stay in Touch</h2>  
+            <div class="text-container__border-bottom footer-container__border-bottom"></div>  
+        </div>
+
+        <form action="#" class="form">
+            <input  class="form__input" type="text" name="post" placeholder="Enter your email address">
+            <input class="form__button" type="submit" name="button" value="Submit">
+        </form>
+        <div class="footer-container__navigation">
+            <div class="nav-container nav-footer">
+                <p class="nav-container__text">Escape.</p>
+                <nav class="nav-container__menu nav-menu">
+                    <ul class="nav-menu__list">
+                        <li class="nav-menu__list-item nav-footer__list-item"><a href="#home" class="nav-menu__link nav-footer__link">HOME</a></li>
+                        <li class="nav-menu__list-item nav-footer__list-item"><a href="#categories" class="nav-menu__link nav-footer__link">CATEGORIES</a></li>
+                        <li class="nav-menu__list-item nav-footer__list-item"><a href="#about" class="nav-menu__link nav-footer__link">ABOUT</a></li>
+                        <li class="nav-menu__list-item nav-footer__list-item"><a href="#contact" class="nav-menu__link nav-footer__link">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+body {
+    background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url("/static/img/admin/admin.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* padding: 120px 0 0 0; */
+
+}
+
+.title {
+    transform: translateY(-26px);
+}
+
+.title__text-big {
+    font-family: 'Lora';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 45.5px;
+    line-height: 46px;
+    color: #FFFFFF;
+}
+
+.title__text-small {
+    font-family: 'Oxygen';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24.5px;
+    line-height: 31px;
+    color: #FFFFFF;
+}
+
+.title__text {
+    font-family: 'Oxygen';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 25px;
+    color: #FFFFFF;
+    margin-top: 16px;
+}
+
+.login-block {
+    padding: 56px 40px 164px 40px;
+    background-color: white;
+    width: 400px;
+    border-radius: 3px;
+}
+
+.login-block__title {
+    margin-bottom: 50px;
+    font-family: 'Lora';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 40px;
+    color: #000000;
+
+}
+
+.form-text {
+    margin-bottom: 5px;
+    font-family: 'Oxygen';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #7A7A7A;
+}
+
+
+.login-block__form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.form-input:not(:last-child) {
+    margin-bottom: 40px;
+    height: 40px;
+    border: unset;
+    border-bottom: 1px solid #EAEAEA;
+    outline: none;
+    font: normal 16px/1.5 Oxygen;
+    color: #2E2E2E;
+}
+    
+.form-input:focus {
+    background: #F7F7F7;
+    border-bottom: 1px solid #2E2E2E;
+    border-radius: 5px 5px 0px 0px;
+    
+}
+
+.form-button {
+    background: #DD783F;
+    border-radius: 3px;
+    border: unset;
+    width: 93px;
+    height: 48px;
+    font-family: 'Oxygen';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+
+}
+
+.btnpass {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    bottom: 95px;
+    right: 0px;
+    cursor: pointer;
+    border: 0;
+    background-color: transparent;
+    outline: none;
+    background: url(../img/admin/admin_icons/eye-off.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.btnpass.active {
+    background: url(../img/admin/admin_icons/eye.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
